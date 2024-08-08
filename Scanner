@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class StringComparison {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите первое число (a): ");
+        int a = scanner.nextInt();
+
+        System.out.print("Введите второе число (b): ");
+        int b = scanner.nextInt();
+
+        // Сравнение чисел
+        if (a > b) {
+            System.out.println("a > b");
+        } else if (a < b) {
+            System.out.println("a < b");
+        } else {
+            System.out.println("a = b");
+        }
+
+        // Вычисления
+        System.out.println("a + b = " + (a + b));
+        System.out.println("a - b = " + (a - b));
+        System.out.println("a * b = " + (a * b));
+        if (b != 0) { // Проверка на деление на ноль
+            System.out.println("a / b = " + (a / (double) b)); // Деление с преобразованием в double
+        } else {
+            System.out.println("Деление на ноль невозможно!");
+        }
+    }
+}
